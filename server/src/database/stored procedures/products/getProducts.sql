@@ -1,7 +1,6 @@
-CREATE or alter PROCEDURE [dbo].[getProducts]
-	
+CREATE or ALTER PROCEDURE getProducts
 as
-
+	
 set nocount on;
 
 begin

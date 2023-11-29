@@ -3,8 +3,8 @@ post http://localhost:4100/user/register
 Content-Type: application/json
 
 {
-    "user_name": "diana",
-    "email":"dianaaberi12@gmail.com",
+    "user_name": "mercy",
+    "email":"mercy1@gmail.com",
     "password": "@Santa2023"
 }
 
@@ -23,7 +23,7 @@ post http://localhost:4100/user/login
 Content-Type: application/json
 
 {    
-    "email":"dianaaberi12@gmail.com",
+    "email":"mercy1@gmail.com",
     "password": "@Santa2023"
 }
 #####update user

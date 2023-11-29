@@ -29,8 +29,8 @@
   margin-left: 0px;
   padding-left: 0%;
   padding: 20px;
-  width: 20vw;
-  /* overflow: auto; */
+  min-width: 30vh;
+  overflow: auto;
   padding-top: 10%;
   min-height: 100vh;
   float: left;
@@ -49,6 +49,9 @@
   margin: 0;
   line-height: 50px;
   margin-left: 15%;
+}
+.profile {
+  padding-top: none;
 }
 
 nav ul {
@@ -141,10 +144,9 @@ form button {
   background-color: rgb(231, 53, 53) !important;
 }
 .search-container {
-  /* position: relative;
+  position: relative;
   display: inline-block;
-  padding-left: 67.5%; */
-  padding-bottom: 10px;
+  margin-left: 69%;
 }
 
 .search-input {
@@ -165,6 +167,7 @@ form button {
 .fa-search {
   font-size: 18px;
 }
+
 @media screen and (max-width: 600px) {
   .container {
     flex-direction: column;

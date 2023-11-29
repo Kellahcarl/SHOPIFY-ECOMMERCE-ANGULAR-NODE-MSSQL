@@ -56,12 +56,13 @@ export const registerUser = async (req: Request, res: Response) => {
 
     if (error)
       return res.status(400).json({
-        error:
-          "check email or password ! password should be atleast 8 characters long with letters symbols and uppercase letters",
+        error: error.details[0].message,
       });
 
     const procedure1 = "getUserByEmail";
-    const result = await execute(procedure1, { email });
+
+    const param = { email };
+    const result = await execute(procedure1, param);
 
     const userWithEmail =
       result.recordset && result.recordset.length > 0
@@ -88,7 +89,7 @@ export const registerUser = async (req: Request, res: Response) => {
     const params = newUser;
     // console.log(params);
 
-    await execute(procedureName, params);
+    await execute(procedureName, newUser);
 
     return res.status(200).json({ message: "User registered successfully" });
   } catch (error) {
@@ -115,7 +116,6 @@ export const loginUser = async (req: Request, res: Response) => {
       const user = recordset[0];
 
       console.log(user);
-      
 
       if (!user) {
         return res.status(404).json({ error: "Account does not exist" });
@@ -199,7 +199,6 @@ export const forgotPassword = async (req: Request, res: Response) => {
   try {
     const { email } = req.body;
     console.log(email);
-    
 
     if (!email) return res.status(400).send({ message: "email is required" });
 
@@ -253,9 +252,7 @@ export const resetPassword = async (req: Request, res: Response) => {
     const userWithId = result.recordset[0];
 
     if (!userWithId)
-      return res
-        .status(404)
-        .send({ error: "User Doesn't Exist" });
+      return res.status(404).send({ error: "User Doesn't Exist" });
 
     const newPassword = await hashPass(password);
 
