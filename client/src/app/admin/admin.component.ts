@@ -241,6 +241,7 @@ export class AdminComponent {
           confirmButtonText: 'Yes, delete it !',
           cancelButtonText: 'No, cancel !  ',
           reverseButtons: true,
+          
         })
         .then(async (result) => {
           if (result.isConfirmed) {

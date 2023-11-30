@@ -3,12 +3,12 @@ describe('user functionality', () => {
     cy.loginUser();
   });
 
-  // it('search for a product', () => {
-  //   cy.visit('/products');
-  //   const searchterm = 'winter';
-  //   cy.get('[data-cy="searchproduct"]').type(searchterm);
-  //   cy.get('[data-cy="product"]').should('have.length.greaterThan', 0);
-  // });
+  it('search for a product', () => {
+    cy.visit('/products');
+    const searchterm = 'winter';
+    cy.get('[data-cy="searchproduct"]').type(searchterm);
+    cy.get('[data-cy="product"]').should('have.length.greaterThan', 0);
+  });
 
   it('views a product', () => {
     cy.visit('/products');
