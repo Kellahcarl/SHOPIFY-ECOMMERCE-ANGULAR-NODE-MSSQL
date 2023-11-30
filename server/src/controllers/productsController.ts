@@ -38,7 +38,7 @@ export const createProduct = async (req: Request, res: Response) => {
     await execute(procedure, params);
     return res.send({ message: "product created successfully" });
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     res.send((error as Error).message);
   }
 };
@@ -65,13 +65,12 @@ export const updateProduct = async (req: Request, res: Response) => {
     };
 
     const ProcedureName = "updateProduct";
-   
 
     await execute(ProcedureName, newProject);
 
     return res.status(200).send({ message: "Product updated successfully" });
   } catch (error) {
-    console.log(error);
+    // console.error(error);
     res.status(500).send({
       error: (error as Error).message,
       message: "Internal Server Error",
@@ -92,7 +91,7 @@ export const deleteProduct = async (req: Request, res: Response) => {
 
     res.status(201).send({ message: "product deleted Successfully" });
   } catch (error) {
-    console.log(error);
+    // console.error(error);
     res.status(500).send({
       error: (error as Error).message,
       message: "Internal Sever Error",
@@ -115,7 +114,7 @@ export const getProduct = async (req: Request, res: Response) => {
 
     res.json(result.recordset);
   } catch (error) {
-    console.log(error);
+    // console.error(error);
     res.status(404).send({ error: "internal server error" });
   }
 };
@@ -127,7 +126,7 @@ export const getProducts = async (req: Request, res: Response) => {
 
     return res.json(result.recordset);
   } catch (error) {
-    console.log(error);
+    // console.error(error);
     res.status(404).send({ message: "internal server error" });
   }
 };

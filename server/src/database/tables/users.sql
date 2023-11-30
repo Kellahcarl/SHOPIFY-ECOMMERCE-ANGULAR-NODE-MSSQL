@@ -11,10 +11,12 @@ CREATE  TABLE users (
 	password varchar(250) NOT NULL,
 )
 
-DROP TABLE users
+-- DROP TABLE users
 
 
 
-select * from users
+-- select * from users
 
-update users set isAdmin = 1 where email = 'caleb.kellah@thejitu.com'
+-- update users set isAdmin = 1 where email = 'caleb.kellah@thejitu.com'
+
+-- DELETE FROM users WHERE email = 'gamesmy177@gmail.com'
