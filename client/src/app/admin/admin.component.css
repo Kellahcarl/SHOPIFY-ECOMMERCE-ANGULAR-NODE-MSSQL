@@ -78,7 +78,7 @@ nav ul li {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
-  width: 80vw;
+  width: 50vw;
 }
 
 form input,
@@ -174,9 +174,16 @@ form button {
   }
 
   .sidebar {
-    width: 100%;
+    width: 60%;
+    height: 60%;
     margin-left: 0;
     padding-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  .search-container {
+    padding-left: 0%;
+    padding-right: 30%;
   }
 
   .content {
@@ -184,11 +191,20 @@ form button {
   }
 
   .product-row {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
   }
 
   .product {
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .actions {
+    margin-top: 40%;
+  }
+  .details {
+    margin-top: 15%;
   }
 }

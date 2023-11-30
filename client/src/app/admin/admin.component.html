@@ -19,55 +19,57 @@
   </div>
 
   <div class="content">
-    <div class="search-container my-4">
-      <input
-        [(ngModel)]="searchTerms"
-        type="text"
-        class="search-input"
-        placeholder="Search..."
-      />
-      <span class="search-icon"><i class="fas fa-search"></i></span>
-    </div>
-    <div class="card">
-      <h2>Add Product</h2>
-      <form [formGroup]="addProductForm" (ngSubmit)="onAddProductSubmit()">
+    <div class="inputt">
+      <div class="search-container my-4">
         <input
-          formControlName="title"
+          [(ngModel)]="searchTerms"
           type="text"
-          name="title"
-          placeholder="Product title"
-          required
+          class="search-input"
+          placeholder="Search..."
         />
-        <textarea
-          name="description"
-          placeholder="description"
-          required
-          formControlName="description"
-        ></textarea>
-        <input
-          type="number"
-          name="price"
-          placeholder="Product Price"
-          required
-          formControlName="price"
-        />
-        <input
-          type="number"
-          name="stock"
-          placeholder="stock available"
-          required
-          formControlName="stock"
-        />
-        <input
-          type="text"
-          name="image"
-          placeholder="image url"
-          required
-          formControlName="image"
-        />
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+      </div>
+      <div class="card">
+        <h2>Add Product</h2>
+        <form [formGroup]="addProductForm" (ngSubmit)="onAddProductSubmit()">
+          <input
+            formControlName="title"
+            type="text"
+            name="title"
+            placeholder="Product title"
+            required
+          />
+          <textarea
+            name="description"
+            placeholder="description"
+            required
+            formControlName="description"
+          ></textarea>
+          <input
+            type="number"
+            name="price"
+            placeholder="Product Price"
+            required
+            formControlName="price"
+          />
+          <input
+            type="number"
+            name="stock"
+            placeholder="stock available"
+            required
+            formControlName="stock"
+          />
+          <input
+            type="text"
+            name="image"
+            placeholder="image url"
+            required
+            formControlName="image"
+          />
 
-        <button type="submit">Add product</button>
-      </form>
+          <button type="submit">Add product</button>
+        </form>
+      </div>
 
       <div class="product-row">
         <div
